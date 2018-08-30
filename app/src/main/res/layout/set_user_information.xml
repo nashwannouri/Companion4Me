@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#64b5f6">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        app:contentInsetStart="0dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        style="@style/Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                android:id="@+id/doneBtn"
+                android:layout_marginLeft="10dp"
+                android:layout_centerInParent="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_action_forward"
+                android:onClick="goToInterests" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skip"
+                android:id="@+id/backBtn"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@+id/doneBtn"
+                android:onClick="goToInterests" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="25dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordTextField"
+            android:layout_gravity="center_horizontal"
+            android:hint="SIP password"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:layout_marginTop="15dp"
+            android:layout_centerInParent="true"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameTextField"
+            android:hint="SIP username"
+            android:layout_centerInParent="true"
+            android:layout_above="@+id/passwordTextField"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_above="@+id/usernameTextField"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:text="If you have registered, or already have an account, please enter your details below."/>
+
+    </RelativeLayout>
+
+</LinearLayout>

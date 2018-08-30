@@ -1,0 +1,39 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_addfriend"
+        android:icon="@drawable/ic_person_add_white_24dp"
+        android:title="Add user"
+        app:showAsAction="ifRoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <item
+        android:id="@+id/action_calluser"
+        android:icon="@drawable/ic_call_white_24dp"
+        android:title="Call User"
+        app:showAsAction="ifRoom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <item
+        android:id="@+id/action_viewprofile"
+        android:orderInCategory="1"
+        android:title="View Profile"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_hideChat"
+        android:orderInCategory="2"
+        android:title="Hide Chat"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_blockuser"
+        android:orderInCategory="3"
+        android:title="Block"
+        app:showAsAction="never"/>
+
+</menu>

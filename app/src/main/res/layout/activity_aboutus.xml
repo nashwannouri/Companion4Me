@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:materialdesign="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="24dp">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#01579b"
+        app:contentInsetStart="0dp"
+        style="@style/Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_alignParentStart="true"
+                android:background="@drawable/ic_action_back"
+                android:id="@+id/backButtonAbout" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="About us"
+                android:textSize="25dp"
+                android:textColor="@android:color/white"/>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="false"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Companion4ME App is an early stage application founded in the heart of London.  What does the name mean you ask? \n  Well, Companion4ME is for people looking for likeminded individuals aka Companions.\n\n Why? \n \n Because we want to build an alternative and freindly platform for people to communicate with others who share similar interests .\n\n Who? \n\n Companion4ME was founded by eights guys who each spent 2 years doing geeky stuff at KCL before starting Companion4ME as a University Project.\n\n"
+        android:id="@+id/textView"
+        android:textAlignment="center"
+        android:textColor="#01579b"
+        android:textSize="16dp"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Developed by Team Cyborg Lightning:\n Nashwan, Lewis, Amos, Simeon,\n Austin, Nishant, Karim and Ahad"
+        android:id="@+id/textView2"
+        android:textAlignment="center"
+        android:textColor="#01579b"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

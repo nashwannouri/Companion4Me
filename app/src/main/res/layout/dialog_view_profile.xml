@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+
+            <ImageView
+                android:id="@+id/vp_Avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/men1"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/vp_UserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User's name"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:layout_weight="1">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="8dp"
+                android:text="Choose avatar"
+                android:id="@+id/vp_InterestList" />
+
+        </ScrollView>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="67dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:text="Choose avatar"
+                android:id="@+id/listMatched"
+                android:layout_weight="1"
+                android:layout_below="@+id/loadButton"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Load more people"
+                android:id="@+id/loadButton"
+                android:layout_weight="1"
+                android:layout_below="@+id/seekDist"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lowAgeSpin"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/white"
+
+                android:layout_weight="1"
+                android:layout_alignParentTop="true"
+                android:layout_alignRight="@+id/highAgeSpin"
+                android:layout_alignEnd="@+id/highAgeSpin"
+                android:layout_toRightOf="@+id/loadButton"
+                android:layout_toEndOf="@+id/loadButton" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true">
+
+            </ScrollView>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/genderSpin"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/eduSpin"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/loadButton"
+                android:layout_toEndOf="@+id/loadButton" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Search near me"
+                android:id="@+id/checkBoxLoc"
+                android:layout_gravity="right"
+                android:layout_below="@+id/genderSpin"
+                android:layout_alignLeft="@+id/loadButton"
+                android:layout_alignStart="@+id/loadButton" />
+
+            <SeekBar
+                android:layout_width="237dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekDist"
+                android:layout_gravity="right"
+                android:layout_below="@+id/checkBoxLoc"
+                android:layout_centerHorizontal="true" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/highAgeSpin"
+                android:spinnerMode="dropdown"
+                android:layout_below="@+id/lowAgeSpin"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_toRightOf="@+id/loadButton"
+                android:layout_toEndOf="@+id/loadButton" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Minimum Age"
+                android:textColor="#01579b"
+                android:id="@+id/minAgeTV"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_toLeftOf="@+id/lowAgeSpin"
+                android:layout_toStartOf="@+id/lowAgeSpin"
+                android:layout_above="@+id/highAgeSpin"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Maximum Age"
+                android:textColor="#01579b"
+
+                android:id="@+id/maxAgeTV"
+                android:textAlignment="center"
+                android:textSize="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/minAgeTV"
+                android:layout_toLeftOf="@+id/lowAgeSpin"
+                android:layout_toStartOf="@+id/lowAgeSpin"
+                android:layout_alignBottom="@+id/highAgeSpin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Gender"
+                android:id="@+id/genderTV"
+                android:textAlignment="center"
+                android:textColor="#01579b"
+
+                android:textSize="18dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignRight="@+id/loadButton"
+                android:layout_alignEnd="@+id/loadButton"
+                android:layout_above="@+id/checkBoxLoc"
+                android:layout_alignTop="@+id/genderSpin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="Education Level"
+                android:id="@+id/tvEdu"
+                android:textAlignment="center"
+                android:textColor="#01579b"
+
+                android:textSize="18dp"
+                android:layout_toLeftOf="@+id/genderSpin"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignBottom="@+id/eduSpin"
+                android:layout_below="@+id/highAgeSpin" />
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/eduSpin"
+                android:spinnerMode="dropdown"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/highAgeSpin"
+                android:layout_toRightOf="@+id/tvEdu" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="5km"
+                android:id="@+id/sliderTV"
+                android:layout_toRightOf="@+id/seekDist"
+                android:layout_alignTop="@+id/seekDist"
+                android:layout_above="@+id/loadButton"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+        </RelativeLayout>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:id="@+id/searchMatches"
+            android:hint="Interests"
+            android:layout_weight="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toLeftOf="@+id/searchButton"
+            android:layout_toStartOf="@+id/searchButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Now"
+            android:id="@+id/searchButton"
+            android:layout_weight="1"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</FrameLayout>

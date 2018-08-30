@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:background="#01579b"
+        app:contentInsetStart="0dp"
+        style="@style/Toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:id="@+id/backButtonSip"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_action_back"
+                android:layout_alignParentStart="true" />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:ems="10"
+            android:id="@+id/passwordTextField"
+            android:layout_below="@id/passwordTextField"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:hint="SIP password"
+            android:textAlignment="center" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/usernameTextField"
+            android:layout_centerInParent="true"
+            android:layout_above="@id/passwordTextField"
+            android:hint="SIP username"
+            android:textAlignment="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/registerTV"
+            android:text="If you already have an account, enter your details below. Otherwise click the register button."/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:id="@+id/registerBtn"
+            android:layout_gravity="center_horizontal"
+            android:layout_below="@id/registerTV"
+            android:onClick="goToRegisterSipAccount" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Done"
+            android:id="@+id/doneBtn"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/passwordTextField"
+            android:onClick="insertSipUserInfo" />
+    </RelativeLayout>
+</LinearLayout>

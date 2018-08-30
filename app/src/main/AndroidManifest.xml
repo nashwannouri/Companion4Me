@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="lightning.cyborg">
+
+
+    <uses-feature
+        android:name="android.hardware.sip.voip"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="true" />
+
+    <!-- START Added for GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="lightning.cyborg.permission.C2D_MESSAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_SIP" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+ needed for older devices -
+ used to check app background / foreground status
+    -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- START Added for GCM -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="lightning.cyborg.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="lightning.cyborg.permission.C2D_MESSAGE" />
+
+
+    <!-- END Added for GCM -->
+    <application
+        android:name=".app.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.ChatRoomActivity"
+            android:label="@string/title_activity_chat_room_discussion"
+            android:parentActivityName=".activity.UserHomepage"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.UserHomepage" />
+        </activity>
+        <activity
+            android:name=".activity.UserHomepage"
+            android:label="Test"
+            android:theme="@style/AppTheme"></activity>
+        <activity
+            android:name=".activity.RegistrationActivity"
+            android:label="Registeration"
+            android:theme="@style/AppTheme"></activity>
+
+
+
+        <activity
+        android:name=".activity.CallActivity"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+         </activity>
+
+        <!-- Setting Activities: Ahad -->
+
+        <activity android:name=".setting.AboutUs"></activity>
+        <activity android:name=".setting.Communication"></activity>
+        <activity android:name=".setting.MenuEditSip"></activity>
+        <activity android:name=".setting.UserDetails"></activity>
+        <activity android:name=".setting.SettingsEditSipUserInfo"></activity>
+        <activity android:name=".setting.SetingsRegisterSipAccount"></activity>
+        <activity android:name=".voip.EditUserSetings"></activity>
+        <activity android:name=".voip.SipSettings"></activity>
+        <activity android:name=".voip.IncomingGui"></activity>
+        <activity android:name=".activity.SetSipUserInfo"></activity>
+
+
+        <activity
+            android:name=".activity.ViewBlockedUsers"
+            android:label="@string/app_name"
+            android:parentActivityName=".activity.UserHomepage"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.UserHomepage" />
+        </activity>
+
+
+        <!-- Avatar Activities: Ahad -->
+
+        <activity android:name=".avator.Avator_Logo"></activity>
+
+        <!-- START Added for GCM -->
+
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="lightning.cyborg" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".gcm.MyGcmPushReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".gcm.GcmIntentService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <!-- END Added for GCM -->
+    </application>
+
+</manifest>
